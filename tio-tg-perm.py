@@ -32,5 +32,5 @@ for tg in tio_client.target_groups.list():
         default_can_use_acl[0]['permissions'] = 16
         tio_client.target_groups.edit(tg['id'], acls=default_can_use_acl)
     else:
-        print('ERROR: Unrecognized Target Group type.')
+        print('WARNING: Unrecognized Target Group type.')
         print(tg['type'])
