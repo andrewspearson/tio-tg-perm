@@ -1,4 +1,5 @@
 # tio-tg-perm
+tio-tg-perm.py updates the Default permissions for all Target Groups to 'Can Use'.
 ## Requirements
 * python3
 * [pyTenable](https://github.com/tenable/pyTenable)
