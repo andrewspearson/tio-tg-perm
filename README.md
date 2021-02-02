@@ -13,6 +13,7 @@ $ deactivate
 ```
 ## Usage
 ### Python virtual environment
+Edit lines 4 & 5 in the script with Tenable.IO Administrator API keys.
 ```
 $ cd /usr/local/bin
 $ ./venv/bin/python tio-tg-perm.py
