@@ -7,6 +7,11 @@ tio_client = TenableIO(
 )
 # tio_client._session.verify = False
 
+session_details = tio_client.session.details()
+if session_details['permissions'] != 64 or 'ADMIN' not in session_details['user_permissions']:
+    print('This script must run as a user with Administrator permissions. Exiting.')
+    quit()
+
 default_can_use_acl = [
     {
         "name": "Default",
