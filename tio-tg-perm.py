@@ -24,7 +24,7 @@ for tg in tio_client.target_groups.list():
         print('Updating System Target Group ' + tg['name'] + ' Default permission to \'Can Use\'')
         default_can_use_acl[0]['permissions'] = 32
         tio_client.target_groups.edit(tg['id'], acls=default_can_use_acl)
-    elif tg['type'] == 'system' and tg['name'] == 'Default':
+    elif (tg['type'] == 'system' and tg['name'] == 'Default') or tg['type'] == 'group':
         pass
     elif tg['type'] == 'user':
         print('Updating User Target Group ' + tg['name'] + ' Default permission to \'Can Use\'')
